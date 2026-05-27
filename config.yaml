@@ -24,7 +24,7 @@ proxies:
     type: hysteria2
     server: vpn.lakespa.us
     port: 8443
-    password: NR7/Q+L2wtoiK89bPUJavw==
+    password: qTkQOlDvzBVTKxfuGbQN04WZRf8rH+bqB8RVPSIoPQk=
     sni: bing.com
     skip-cert-verify: true
 

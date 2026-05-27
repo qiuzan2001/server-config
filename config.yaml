@@ -19,7 +19,7 @@ dns:
 proxies:
   - name: "US-Hy2"
     type: hysteria2
-    server: vpn.lakespa.us
+    server: 73.210.24.148
     port: 8443
     password: qTkQOlDvzBVTKxfuGbQN04WZRf8rH+bqB8RVPSIoPQk=
     sni: apple.com
@@ -27,7 +27,7 @@ proxies:
 
   - name: "US-VLESS"
     type: vless
-    server: vpn.lakespa.us
+    server: 73.210.24.148
     port: 443
     uuid: 982a3bb1-2594-4cc1-a4cb-5479b85d99a4
     network: tcp

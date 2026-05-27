@@ -3,11 +3,20 @@ allow-lan: false
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
+unified-delay: true
 
 dns:
   enable: true
+  listen: 0.0.0.0:1053
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localhost"
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -42,6 +51,7 @@ proxy-groups:
       - DIRECT
 
 rules:
+  - DOMAIN-SUFFIX,lakespa.us,DIRECT
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-KEYWORD,baidu,DIRECT
   - DOMAIN-KEYWORD,taobao,DIRECT
@@ -51,6 +61,5 @@ rules:
   - DOMAIN-KEYWORD,163,DIRECT
   - DOMAIN-KEYWORD,netease,DIRECT
   - DOMAIN-KEYWORD,jd.com,DIRECT
-  - DOMAIN-SUFFIX,lakespa.us,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,Proxy

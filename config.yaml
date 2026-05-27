@@ -12,12 +12,9 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  fallback:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
 
 proxies:
   - name: "US-Hy2"
@@ -25,7 +22,7 @@ proxies:
     server: vpn.lakespa.us
     port: 8443
     password: qTkQOlDvzBVTKxfuGbQN04WZRf8rH+bqB8RVPSIoPQk=
-    sni: bing.com
+    sni: apple.com
     skip-cert-verify: true
 
   - name: "US-VLESS"

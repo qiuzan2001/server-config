@@ -13,6 +13,8 @@ proxies:
     password: qTkQOlDvzBVTKxfuGbQN04WZRf8rH+bqB8RVPSIoPQk=
     sni: apple.com
     skip-cert-verify: true
+    up: "100 mbps"
+    down: "200 mbps"
 
   - name: "US-VLESS"
     type: vless

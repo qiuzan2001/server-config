@@ -28,7 +28,15 @@ dns:
     geoip-code: CN
 
 proxies:
-  - name: "US-Home"
+  - name: "US-Hy2"
+    type: hysteria2
+    server: vpn.lakespa.us
+    port: 8443
+    password: NR7/Q+L2wtoiK89bPUJavw==
+    sni: bing.com
+    skip-cert-verify: true
+
+  - name: "US-VLESS"
     type: vless
     server: vpn.lakespa.us
     port: 443
@@ -47,7 +55,8 @@ proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
-      - "US-Home"
+      - "US-Hy2"
+      - "US-VLESS"
       - DIRECT
 
 rules:
